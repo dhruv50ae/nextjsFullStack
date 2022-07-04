@@ -11,7 +11,7 @@ const handler = (req, res) => {
       id: new Date().toISOString(),
     };
 
-    const filePath = path.join(process.pwd(), "data", "feedback.json");
+    const filePath = path.join(process.cwd(), "data", "feedback.json");
     const fileData = fs.readFileSync(filePath);
     const data = JSON.parse(fileData);
     data.push(newFeedback);
